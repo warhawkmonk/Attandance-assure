@@ -1,0 +1,161 @@
+<Button>:
+    size_hint: .2, 0.1
+    background_color: (0.06, .36, .4, .675)  
+<monk>:
+    name:"molester"
+    mokila:mokila
+    mokilal:mokilal
+    mokilali:mokilali
+    mokilall:mokilall
+    lomku:lomku
+    strong:strong
+    FloatLayout:
+        orientation: "vertical"
+        spacing: 10
+        space_x: self.size[0]/3
+        canvas.before: 
+            Color: 
+                rgba: (1, 1, 1, 1) 
+            Rectangle: 
+                source:'E:\ytbh.jpg'
+                size: root.width, root.height 
+                pos: self.pos 
+        MDTextField:    
+            id:strong
+            icon_left: "email"
+            pos_hint:{'center_x':0.5, 'center_y':0.94}
+            size_hint:0.8,0.1
+            helper_text: "This will disappear when you click off"
+            helper_text_mode: "persistent"
+            hint_text:'Roll'       
+        Button:  
+            text: 'back'
+            pos_hint :{'center_x':0.15, 'center_y':0.2} 
+            background_color: (0.06, .36, .4, .675) 
+            on_press: root.goodies()
+        Button:
+            text: 'Passcode'
+            pos_hint :{'center_x':0.15, 'center_y':0.5} 
+            background_color: (0.06, .36, .4, .675) 
+            on_press: root.sonik()
+        Button:
+            text: 'attandance'
+            pos_hint :{'center_x':0.15, 'center_y':0.65} 
+            background_color: (0.06, .36, .4, .675) 
+            on_press: root.am()
+        MDIconButton:
+            icon: "card-search"
+            pos_hint :{'center_x':0.9, 'center_y':0.95}
+            size_hint:0.2,0.2 
+            on_press:root.star()
+        Button:
+            id:lomku
+            text: 'event'
+            pos_hint :{'center_x':0.15, 'center_y':0.8} 
+            background_color: (0.06, .36, .4, .675) 
+            on_press: root.good()
+        Button:
+            text: 'developer'
+            pos_hint :{'center_x':0.15, 'center_y':0.35} 
+            background_color: (0.06, .36, .4, .675) 
+            on_press: root.click()
+        MDTextField:
+            id : mokila
+            hint_text: 'QNxxxxxxx9SSAAC\nenter api key'
+            pos_hint: {'center_x':0.65, 'center_y':0.4} 
+            size_hint:0.5,0.07
+            mode: "rectangle"
+            
+        MDTextField:
+            id : mokilal
+            hint_text: 'PQxxxxxxxxJMNL\nenter secretkey'
+            pos_hint: {'center_x':0.65, 'center_y':0.3} 
+            size_hint:0.5,0.07
+            mode: "rectangle"
+            
+        MDTextField:
+            id : mokilali
+            hint_text: 'paste excel.csv \nlink'
+            pos_hint: {'center_x':0.65, 'center_y':0.5} 
+            size_hint:0.5,0.07
+            mode: "rectangle"
+            
+        MDTextField:
+            id : mokilall
+            hint_text: 'vhj1@gmail.com\nenter email'
+            pos_hint: {'center_x':0.65, 'center_y':0.2} 
+            size_hint:0.5,0.07
+            mode: "rectangle"
+            
+<AnotherScreen>:
+    name:"second"
+    FloatLayout:
+        orientation: "vertical"
+        spacing: 10
+        space_x: self.size[0]/3
+        canvas.before: 
+            Color: 
+                rgba: (1, 1, 1, 1) 
+            Rectangle: 
+                source:'E:\mkilojk123.jpg'
+                size: root.width, root.height 
+                pos: self.pos
+        FloatLayout:
+            orientation:"vertical"
+            MDToolbar:
+                title: "Monk"
+                pos_hint: {'center_x':0.5, 'center_y':0.95}
+                size_hint:1,0.35 
+                md_bg_color: app.theme_cls.accent_color
+            MDIconButton:
+                icon: "contact-phone"
+                pos_hint: {'center_x':0.2, 'center_y':0.88}
+            MDIconButton:
+                icon: "onenote"
+                pos_hint: {'center_x':0.4, 'center_y':0.88}
+            MDIconButton:
+                icon: "file-excel"
+                pos_hint: {'center_x':0.6, 'center_y':0.88}
+            MDIconButton:
+                icon: "card-search"
+                pos_hint: {'center_x':0.8, 'center_y':0.88}
+                on_release:
+                    root.lonk()
+            MDRectangleFlatButton:
+                text: "games"
+                size_hint:0.4,0.2
+                pos_hint: {'center_x':0.25, 'center_y':0.38} 
+                text_color: app.theme_cls.accent_color
+                on_release:root.rongr()
+            MDRectangleFlatButton:
+                text: "add name"
+                size_hint:0.4,0.2
+                pos_hint: {'center_x':0.25, 'center_y':0.15}
+                text_color: app.theme_cls.accent_color
+            MDRectangleFlatButton:
+                text: "delete names"
+                size_hint:0.4,0.2
+                pos_hint: {'center_x':0.75, 'center_y':0.38} 
+                text_color: app.theme_cls.accent_color
+            MDRectangleFlatButton:
+                text: "batches"
+                size_hint:0.4,0.2
+                pos_hint: {'center_x':0.75, 'center_y':0.15} 
+                text_color: app.theme_cls.accent_color
+            MDRectangleFlatButton:
+                text: "batches"
+                size_hint:0.4,0.2
+                pos_hint: {'center_x':0.75, 'center_y':0.62} 
+                text_color: app.theme_cls.accent_color
+            MDRectangleFlatButton:
+                text: "add name"
+                size_hint:0.4,0.2
+                pos_hint: {'center_x':0.25, 'center_y':0.62} 
+                text_color: app.theme_cls.accent_color
+            MDFloatingActionButton:
+                id: button
+                icon: "magnify"
+                pos_hint: {'center_x':0.85, 'center_y':0.78} 
+                on_press:root.monk()
+
+            
